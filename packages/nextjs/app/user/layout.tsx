@@ -13,7 +13,7 @@ export default function AdminLayout({
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
-        <div className=" bg-lightgreen/[40%]">
+        <div className=" bg-lightgreen/[20%]">
             {/* Page Wrapper Start  */}
             <div className="flex h-screen gap-1.5 overflow-hidden">
                 {/* Sidebar Start */}
