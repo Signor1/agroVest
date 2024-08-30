@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 const Dashboard = () => {
@@ -26,6 +27,10 @@ const Dashboard = () => {
                     <h4 className='text-gray-800 font-light'>Total Sales</h4>
                     <h1 className="text-2xl text-darkgreen font-semibold">0.9 ETH</h1>
                 </div>
+            </main>
+
+            <main className='w-full grid md:grid-cols-2 gap-4'>
+
             </main>
         </section>
     )
