@@ -5,11 +5,11 @@ const Categories = () => {
     return (
         <section className='w-full flex flex-col md:px-28 px-6 my-20'>
             <main className='w-full flex flex-col gap-6'>
-                <h1 className="text-4xl text-darkgreen font-medium">Explore our product <br />categories</h1>
-                <div className='w-full grid grid-cols-2 gap-16'>
+                <h1 className="md:text-4xl text-3xl text-darkgreen font-medium">Explore our product <br />categories</h1>
+                <div className='w-full grid md:grid-cols-2 md:gap-16 gap-6'>
                     <div className='w-full flex items-center bg-gray-100 rounded-[10px] p-6 shadow-lg'>
                         <div className='flex-1 flex flex-col gap-3'>
-                            <h4 className='text-3xl text-gray-700'>Fresh Farm Produce</h4>
+                            <h4 className='md:text-3xl text-2xl text-gray-700'>Fresh Farm Produce</h4>
                             <p className='text-sm text-gray-500'>Farm-fresh fruits, vegetables, and herbs at their peak.</p>
                         </div>
                         <div className='w-[45%]'>
@@ -19,7 +19,7 @@ const Categories = () => {
 
                     <div className='w-full flex items-center bg-gray-100 rounded-[10px] gap-10 p-6 shadow-lg'>
                         <div className='flex-1 flex flex-col gap-3'>
-                            <h4 className='text-3xl text-gray-700'>Seeds & Plants</h4>
+                            <h4 className='md:text-3xl text-2xl text-gray-700'>Seeds & Plants</h4>
                             <p className='text-sm text-gray-500'>High-quality seeds and young plants ready for your garden.</p>
                         </div>
                         <div className='w-[30%] h-[180px]'>

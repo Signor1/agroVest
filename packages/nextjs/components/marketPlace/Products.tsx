@@ -5,7 +5,7 @@ const Products = () => {
     return (
         <section className='w-full flex flex-col md:px-28 px-6 mb-20'>
             <main className='w-full flex flex-col gap-6'>
-                <h1 className="text-4xl text-darkgreen font-medium">Popular Products</h1>
+                <h1 className="md:text-4xl text-3xl text-darkgreen font-medium">Popular Products</h1>
 
                 <div className='w-full grid lg:grid-cols-4 md:grid-cols-3 gap-6'>
                     {
@@ -18,7 +18,7 @@ const Products = () => {
                                     <h4 className='text-base font-semibold text-gray-700'>{product.name}</h4>
                                     <p className='text-gray-700'>{product.priceInEth} <span className="font-semibold">ETH</span></p>
                                 </div>
-                                <p className='text-sm text-gray-500'>{product.description.slice(0, 50) + "..."}</p>
+                                <p className='text-sm text-gray-500'>{product.description.slice(0, 70) + "..."}</p>
                                 <button className="bg-darkgreen text-lightgreen py-2.5 px-6 rounded-[10px] text-base">Add to cart</button>
                             </div>
                         ))
