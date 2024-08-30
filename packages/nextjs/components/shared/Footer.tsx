@@ -19,7 +19,7 @@ const Footer = () => {
         <section className="w-full flex flex-col gap-10 lg:px-20 md:px-8 px-4 pt-28 bg-lightgreen/[40%]">
             <footer className=" w-full  grid md:grid-cols-2 gap-8 md:gap-0">
                 <div className="w-full flex flex-col gap-6 items-start">
-                    <Logo classname="md:w-[170px] w-[120px]" image={logo} />
+                    <Logo href="/" classname="md:w-[170px] w-[120px]" image={logo} />
                     <div className="flex flex-col gap-4">
                         <p className="text-gray-600 text-lg">Subscribe  to our newsletter for exclusive updates.</p>
                         <div className="flex ">
