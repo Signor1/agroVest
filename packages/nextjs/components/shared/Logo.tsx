@@ -1,11 +1,11 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
-import logo from "../../public/logo-white.png"
 
-const Logo = ({ classname }: { classname: string }) => {
+
+const Logo = ({ classname, image }: { classname: string, image: StaticImageData }) => {
     return (
         <Link href='/' className={classname}>
-            <Image src={logo} alt="Logo" className='w-full' width={1200} height={317} priority quality={100} />
+            <Image src={image} alt="Logo" className='w-full' width={1200} height={317} priority quality={100} />
         </Link>
     )
 }

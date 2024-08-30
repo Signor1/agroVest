@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import HeroSection from "~~/components/home/HeroSection";
 import AboutSection from "~~/components/home/AboutSection";
 import OurOffers from "~~/components/home/OurOffers";
+import OurProcess from "~~/components/home/OurProcess";
 
 const Home: NextPage = () => {
 
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
       <HeroSection />
       <AboutSection />
       <OurOffers />
+      <OurProcess />
     </main>
   );
 };

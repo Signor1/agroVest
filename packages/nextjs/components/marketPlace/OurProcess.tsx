@@ -3,7 +3,7 @@ import React from 'react'
 
 const OurProcess = () => {
     return (
-        <main className="w-full flex md:flex-row flex-col justify-between gap-6 bg-darkgreen lg:px-12 md:px-6 px-4 md:mt-20 mt-12 lg:mb-20 py-12 relative">
+        <main className="w-full flex md:flex-row flex-col justify-between gap-6 bg-darkgreen lg:px-12 md:px-6 px-4 md:mt-28 mt-12 lg:mb-20 py-12 relative">
             <div className='flex flex-col gap-10 lg:w-[30%]'>
                 <h1 className="md:text-4xl text-3xl text-lightgreen font-semibold">Our Process</h1>
                 <ul className='flex flex-col gap-7 list-none'>
@@ -13,7 +13,7 @@ const OurProcess = () => {
                     </li>
                     <li className='flex gap-4 items-start'>
                         <h5 className='px-4 py-3 flex items-center justify-center bg-lightgreen text-darkgreen font-bold mt-1'>2</h5>
-                        <p className='text-base text-gray-200'>Create a business profile: Register and tokenize your agricultural business on AgroVest. Upload your business details, complete the verification process, and create digital tokens representing ownership stakes. </p>
+                        <p className='text-base text-gray-200'>Explore Products: Start by browsing our marketplace, where you’ll find a wide variety of farm-fresh produce, seeds, plants, and more. Each product is listed with detailed information to help you make informed choices.  </p>
                     </li>
                 </ul>
             </div>
@@ -22,11 +22,11 @@ const OurProcess = () => {
                 <ul className='flex flex-col gap-7 list-none'>
                     <li className='flex gap-4 items-start'>
                         <h5 className='px-4 py-3 flex items-center justify-center bg-lightgreen text-darkgreen font-bold mt-1'>3</h5>
-                        <p className='text-base text-gray-200'>Engage with Investors:  Investors can explore tokenized agricultural assets, review business profiles, and make investments directly in the businesses that interest them.</p>
+                        <p className='text-base text-gray-200'>Customize & Checkout:  Select the products you want, customize your order, and easily add them to your cart. Review your order and complete the purchase using our secure checkout process.</p>
                     </li>
                     <li className='flex gap-4 items-start'>
                         <h5 className='px-4 py-3 flex items-center justify-center bg-lightgreen text-darkgreen font-bold mt-1'>4</h5>
-                        <p className='text-base text-gray-200'>Showcase your product: List your agricultural products on our dynamic marketplace. Create detailed product profiles with images, descriptions, and pricing to attract potential buyers.  </p>
+                        <p className='text-base text-gray-200'>Get your delivery: your products will be prepared and delivered directly to you. Enjoy the freshness and quality of your AgroVest marketplace selections, knowing you’ve supported sustainable farming practices.  </p>
                     </li>
                 </ul>
             </div>

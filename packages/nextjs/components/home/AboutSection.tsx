@@ -4,7 +4,7 @@ import React from 'react'
 const AboutSection = () => {
     return (
         <section className='w-full flex flex-col items-center lg:px-20 md:px-6 px-4 md:my-20 my-12'>
-            <main className="w-full lg:h-[600px] grid lg:grid-cols-2 bg-lightgreen lg:rounded-e-2xl">
+            <main className="w-full lg:h-[600px] grid lg:grid-cols-2 bg-lightgreen/[40%] lg:rounded-e-2xl">
                 <div className='w-full h-full grid grid-rows-2'>
                     <div className='w-full h-full'>
                         <Image src={`https://res.cloudinary.com/dad1drjht/image/upload/v1724974943/goejgvi3hst0zlxn139l.png`} className='w-full h-full' alt='heroBg' width={761} height={336} quality={100} priority />
