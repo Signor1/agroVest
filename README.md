@@ -40,20 +40,12 @@
     Agro Vest is Empowering African farmers to directly sell to buyers, reducing the reliance on middlemen, it is also Empowering African farmers by providing investment funds for their farms.
 
 
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-  
-    ·
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
+
   
 </div>
 
-
+    <a href="https://github.com/github_username/repo_name"><View Demo»</strong></a>
+    
 
 <!-- TABLE OF CONTENTS -->
 <details>
