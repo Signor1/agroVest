@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import React from 'react'
 
-const Products = () => {
+const Products = ({ title }: { title: string }) => {
     return (
         <section className='w-full flex flex-col px-2 mb-20'>
             <main className='w-full flex flex-col gap-6'>
-                <h1 className="md:text-3xl text-2xl text-darkgreen font-medium">Available Products</h1>
+                <h1 className="md:text-2xl text-xl text-darkgreen font-medium">{title}</h1>
 
                 <div className='w-full grid lg:grid-cols-3 md:grid-cols-2 gap-6'>
                     {
