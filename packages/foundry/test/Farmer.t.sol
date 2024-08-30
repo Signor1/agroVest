@@ -62,4 +62,79 @@ contract FarmTest is Test {
         farmer.addProductToCart(1);
         vm.stopPrank();
     }
+
+    function testViewCart() public {
+        testaddProductToCart();
+        vm.startPrank(address(buyer_add));
+        farmer.getCartProducts(buyer_add);
+        vm.stopPrank();
+    }
+
+    function testRemoveProductFromCart() public {
+        testaddProductToCart();
+        vm.startPrank(address(buyer_add));
+        farmer.removeProductFromCart(1);
+        vm.stopPrank();
+    }
+
+    function testUpdateFarmProducts() public {
+        testAddFarmProducts();
+        vm.startPrank(address(farm_owner));
+        farmer.updateFarmProduct(
+            0,
+            "Jibola and sons",
+            "test.png",
+            "Lettuce",
+            10
+        );
+        vm.stopPrank();
+    }
+
+    function testViewFarmProducts() public {
+        testAddFarmProducts();
+        vm.startPrank(address(buyer_add));
+        farmer.getFarmProducts();
+        vm.stopPrank();
+    }
+
+    function testGetAllFarmProducts() public {
+        testAddFarmProducts();
+        vm.startPrank(address(buyer_add));
+        farmer.getAllFarmProducts();
+        vm.stopPrank();
+    }
+
+    function testGetName() public {
+        testRegisterFarm();
+        farmer.getName(address(farm_owner));
+    }
+
+    function testGetAddress() public {
+        testRegisterFarm();
+        farmer.getAddress("Jibola and sons");
+    }
+
+    function testPurchaseProduct() public {
+        testaddProductToCart();
+        vm.startPrank(buyer_add);
+        farmer.purchaseProduct(1);
+        vm.stopPrank();
+    }
+
+    function testFailPurchaseNonExistentProduct() public {
+        testaddProductToCart();
+        vm.startPrank(buyer_add);
+        vm.expectRevert("ProductDoesNotExist");
+        farmer.purchaseProduct(999);
+        vm.stopPrank();
+    }
+
+    function testFailInsufficientAllowance() public {
+        testaddProductToCart();
+        vm.startPrank(buyer_add);
+        token.approve(address(farmer), 1);
+        vm.expectRevert("InsufficientAllowance");
+        farmer.purchaseProduct(1);
+        vm.stopPrank();
+    }
 }
