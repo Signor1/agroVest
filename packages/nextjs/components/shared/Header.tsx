@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Logo from "./Logo"
 import MaxWrapper from "./MaxWrapper"
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import logo from "../../public/logo-white.png"
 const Header = () => {

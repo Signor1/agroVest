@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
+import React from "react"
 
 
 const Logo = ({ classname, image }: { classname: string, image: StaticImageData }) => {

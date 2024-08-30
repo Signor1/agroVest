@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react"
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
@@ -11,14 +11,14 @@ import { wagmiConfig } from "~~/services/web3/wagmiConfig";
 import Header from "./shared/Header";
 import Footer from "./shared/Footer";
 
-const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
+export const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   useInitializeNativeCurrencyPrice();
 
   return (
     <>
-      <div className="flex flex-col">
+      <div className="flex flex-col min-h-screen">
         <Header />
-        <main className="relative flex flex-col flex-1">{children}</main>
+        <main className="relative flex flex-col flex-1 min-h-screen">{children}</main>
         <Footer />
       </div>
       <Toaster />
@@ -40,7 +40,7 @@ export const ScaffoldEthAppWithProviders = ({ children }: { children: React.Reac
       <QueryClientProvider client={queryClient}>
         <ProgressBar />
         <RainbowKitProvider avatar={BlockieAvatar}>
-          <ScaffoldEthApp>{children}</ScaffoldEthApp>
+          {children}
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>

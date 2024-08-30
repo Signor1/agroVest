@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import React from 'react'
-import HeroSection from "../../components/investment/HeroSection";
-import InvestmentOffers from "../../components/investment/InvestmentOffers";
-import Opportunities from "../../components/investment/Opportunities";
+import HeroSection from "../../../components/investment/HeroSection";
+import InvestmentOffers from "../../../components/investment/InvestmentOffers";
+import Opportunities from "../../../components/investment/Opportunities";
+import OurProcess from "../../../components/investment/OurProcess";
 
 
 const Investment: NextPage = () => {
@@ -12,6 +13,7 @@ const Investment: NextPage = () => {
             <HeroSection />
             <InvestmentOffers />
             <Opportunities />
+            <OurProcess />
         </main>
     );
 };

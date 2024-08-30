@@ -8,8 +8,8 @@ const HeroSection = () => {
             <div className='w-full h-full md:h-auto lg:pt-28 pt-32 lg:pb-16 md:pb-16 pb-8 lg:px-14 md:px-6 px-4 grid md:grid-cols-2 lg:gap-16 gap-10'>
                 {/* text */}
                 <div className='flex flex-col justify-center order-2 md:order-1 lg:gap-7 gap-5'>
-                    <h1 className='lg:text-7xl text-5xl text-white font-medium'>Invest <span className='text-lightgreen'>In</span> the<br />
-                        future of <br />
+                    <h1 className='lg:text-7xl text-4xl text-white font-medium'>Invest <span className='text-lightgreen'>In</span> the<br />
+                        future of <br className="hidden lg:block" />
                         <span className='text-lightgreen'>Farming</span>.
                     </h1>
                     <p className='text-gray-200 lg:text-2xl text-xl font-light'>Support innovative agricultural ventures and watch your investments grow. Join a thriving community of investors dedicated to sustainable farming. </p>

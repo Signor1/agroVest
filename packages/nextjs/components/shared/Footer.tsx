@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import Logo from "./Logo"
 import logo from "../../public/logo-green.png"
 import Link from "next/link"

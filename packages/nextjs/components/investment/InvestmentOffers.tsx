@@ -14,7 +14,7 @@ const InvestmentOffers = () => {
                             <p className='text-gray-800 font-light text-lg'>AgroVest offers a range of agricultural businesses to diversify your portfolio. Invest in various farms, agri-tech ventures, and sustainable projects, enhancing your portfolio&apos;s stability and growth potential.</p>
                         </div>
                         <div className="w-full order-1 md:order-2 h-[320px] rounded-xl overflow-hidden">
-                            <Image src={`https://res.cloudinary.com/dad1drjht/image/upload/v1724978537/ulnr4fofw6onn9rcisgm.png`} className='w-full h-full object-cover' alt='our offer image' width={497} height={396} quality={100} priority />
+                            <Image src={`https://res.cloudinary.com/dad1drjht/image/upload/v1725029661/cyzxyylz1eq9r80hzreq.png`} className='w-full h-full object-cover' alt='our offer image' width={497} height={396} quality={100} priority />
                         </div>
                     </div>
 
