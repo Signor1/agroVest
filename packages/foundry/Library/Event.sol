@@ -16,5 +16,5 @@ library Event {
         uint256 productId,
         string review
     );
-    event ProductPurchased(address indexed buyer, uint256 indexed productId);
+    event EscrowCreated(address indexed buyer, uint256 indexed orderId);
 }

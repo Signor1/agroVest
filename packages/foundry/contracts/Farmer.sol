@@ -3,9 +3,11 @@ pragma solidity >=0.8.0 <0.9.0;
 import "../Library/Error.sol";
 import "../Library/Event.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "../Interfaces/IFarmEscrow.sol";
 
 contract Farm {
     IERC20 public token;
+    IFarmEscrow public escrow;
 
     mapping(address => string) public business_name;
     mapping(string => address) public nameToAddress;
@@ -49,8 +51,9 @@ contract Farm {
 
     mapping(address => Farmer) details;
 
-    constructor(address _tokenAddress) {
+    constructor(address _tokenAddress, address _escrowAddress) {
         token = IERC20(_tokenAddress);
+        escrow = IFarmEscrow(_escrowAddress);
     }
 
     function registerFarms(
@@ -273,24 +276,35 @@ contract Farm {
         if (allowance < product.product_price) {
             revert Error.InsufficientAllowance();
         }
+        // uint256[] productIds;
+        // uint256[] amounts;
+
+        // // Create arrays for product IDs and amounts
+        // uint256;
+        // productIds[0] = _productId;
+        // uint256;
+        // amounts[0] = product.product_price;
+
+        // // Call createEscrow function
+        escrow.createEscrow(productOwner, _productId, product.product_price);
 
         bool success = token.transferFrom(
             msg.sender,
-            address(this),
+            address(escrow),
             product.product_price
         );
         if (!success) {
             revert Error.TransferFailed();
         }
 
-        productBuyers[_productId].push(msg.sender);
-        purchases[msg.sender][_productId] = true;
+        // productBuyers[_productId].push(msg.sender);
+        // purchases[msg.sender][_productId] = true;
 
-        purchasedProducts[msg.sender].push(product);
+        // purchasedProducts[msg.sender].push(product);
 
         removeProductFromCart(_productId);
 
-        emit Event.ProductPurchased(msg.sender, _productId);
+        emit Event.EscrowCreated(msg.sender, _productId);
     }
 
     function getPurchasedProducts(

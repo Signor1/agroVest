@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "../contracts/Farmer.sol";
+import "../contracts/Invevstment.sol";
 import "./DeployHelpers.s.sol";
 
 contract DeployScript is ScaffoldETHDeploy {
@@ -16,12 +16,15 @@ contract DeployScript is ScaffoldETHDeploy {
         }
         vm.startBroadcast(deployerPrivateKey);
 
-        Farm farm = new Farm(
-            0x3784FCd74C49Ed086Bafd1c77dd9347edc719d7b,
-            0x4E00f80587C04B079A6a2146eCaf37CdD67197C0
+        Investment invest = new Investment(
+            0xc6034ef41b3D5Dca9483F5A1EA29EA4c18C542dB,
+            0x3784FCd74C49Ed086Bafd1c77dd9347edc719d7b
         );
         console.logString(
-            string.concat("Farm deployed at: ", vm.toString(address(farm)))
+            string.concat(
+                "DAO Contract deployed at: ",
+                vm.toString(address(invest))
+            )
         );
 
         vm.stopBroadcast();
