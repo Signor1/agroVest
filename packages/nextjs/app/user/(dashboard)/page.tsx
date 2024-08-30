@@ -1,10 +1,10 @@
 import React from "react"
-import Dashboard from "../../../components/user/Dashboard"
+import UserDashboard from "../../../components/user/Dashboard"
 
-export default function AdminDashboard() {
+export default function Dashboard() {
     return (
         <main className="w-full flex flex-col overflow-x-hidden">
-            <Dashboard />
+            <UserDashboard />
         </main>
     )
 }

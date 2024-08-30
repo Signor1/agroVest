@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-const Dashboard = () => {
+const UserDashboard = () => {
     return (
         <section className="w-full flex flex-col gap-6 py-4">
             <h1 className='uppercase text-darkgreen font-medium text-base md:text-xl'>Overview</h1>
@@ -36,4 +36,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default UserDashboard
