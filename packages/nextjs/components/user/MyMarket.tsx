@@ -11,11 +11,15 @@ const MyMarket = () => {
             <h1 className='uppercase text-darkgreen font-semibold text-base md:text-xl'>Market Place</h1>
 
             <div className="w-full flex gap-4">
-                <Link href="/user/marketplace" className={`text-base font-medium py-2 px-4  ${path === '/user/marketplace' ? 'bg-darkgreen text-lightgreen' : 'text-darkgreen'}`}>All Products</Link>
-                <Link href="/user/marketplace/mine" className={`text-base font-medium py-2 px-4  ${path === '/user/marketplace/mine' ? 'bg-darkgreen text-lightgreen' : 'text-darkgreen'}`}>My Products</Link>
+                <Link href="/user/marketplace" className={`text-base rounded font-medium py-2 px-4  ${path === '/user/marketplace' ? 'bg-darkgreen text-lightgreen' : 'text-darkgreen'}`}>All Products</Link>
+                <Link href="/user/marketplace/mine" className={`text-base rounded font-medium py-2 px-4  ${path === '/user/marketplace/mine' ? 'bg-darkgreen text-lightgreen' : 'text-darkgreen'}`}>My Products</Link>
             </div>
 
 
+            <div className='w-full flex justify-end items-center gap-4'>
+                <button className='bg-darkgreen text-lightgreen py-2.5 px-6 rounded-[5px] text-base'>Mint</button>
+                <button className='bg-darkgreen text-lightgreen py-2.5 px-6 rounded-[5px] text-base'>Add product</button>
+            </div>
 
             <Products title='My Products' />
         </section>
