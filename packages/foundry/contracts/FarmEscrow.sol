@@ -8,6 +8,7 @@ contract FarmEscrow is Ownable(msg.sender) {
     IERC20 public token;
 
     enum EscrowStatus {
+        Null,
         AWAITING_DELIVERY,
         AWAITING_APPROVAL,
         COMPLETE,
@@ -32,10 +33,10 @@ contract FarmEscrow is Ownable(msg.sender) {
         uint256 orderId,
         uint256 amount
     );
-    event DeliveryApproved(uint256 indexed escrowId);
-    event DisputeRaised(uint256 indexed escrowId);
-    event DisputeResolved(uint256 indexed escrowId, address winner);
-    event EscrowCompleted(uint256 indexed escrowId);
+    event DeliveryApproved(uint256 indexed approvedEscrowId);
+    event DisputeRaised(uint256 indexed _ownerescrowId);
+    event DisputeResolved(uint256 indexed resolvedEscrowId, address winner);
+    event EscrowCompleted(uint256 indexed completedEscrowId);
 
     constructor(address _tokenAddress) {
         token = IERC20(_tokenAddress);
