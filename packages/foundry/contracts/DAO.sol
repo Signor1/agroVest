@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+import "../Interfaces/IVotingToken.sol";
+import "../Interfaces/IInvestment.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract DAO is Ownable {
@@ -292,5 +294,44 @@ contract DAO is Ownable {
         uint256 challengeId
     ) external view returns (ChallengeData memory) {
         return challenges[challengeId];
+    }
+
+    // Dispute Section
+
+    function initiateDispute(uint256 challengeId, address arbitrator) external {
+        require(arbitrator != address(0), "Invalid arbitrator address");
+
+        disputes[disputeCounter] = DisputeData({
+            challengeId: challengeId,
+            arbitrator: arbitrator,
+            resolved: false,
+            ruling: false
+        });
+
+        emit DisputeInitiated(disputeCounter, challengeId, arbitrator);
+
+        disputeCounter++;
+    }
+
+    function resolveDispute(uint256 disputeId, bool ruling) external {
+        DisputeData storage dispute = disputes[disputeId];
+        require(
+            msg.sender == dispute.arbitrator,
+            "Only the arbitrator can resolve the dispute"
+        );
+        require(!dispute.resolved, "Dispute already resolved");
+
+        dispute.resolved = true;
+        dispute.ruling = ruling;
+
+        // Implement logic to apply the ruling to the associated challenge
+
+        emit DisputeResolved(disputeId, ruling);
+    }
+
+    function getDispute(
+        uint256 disputeId
+    ) external view returns (DisputeData memory) {
+        return disputes[disputeId];
     }
 }
