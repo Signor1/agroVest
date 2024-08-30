@@ -1,0 +1,155 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Token
+    network: optimism-sepolia
+    source:
+      address: "0x3784FCd74C49Ed086Bafd1c77dd9347edc719d7b"
+      abi: Token
+      startBlock: 16607219
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - TokenLocked
+        - TokenUnlocked
+        - Transfer
+      abis:
+        - name: Token
+          file: ./abis/Token.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: TokenLocked(uint256,address)
+          handler: handleTokenLocked
+        - event: TokenUnlocked(uint256,address)
+          handler: handleTokenUnlocked
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/token.ts
+  - kind: ethereum
+    name: farm
+    network: optimism-sepolia
+    source:
+      address: "0x96b8cbC7Fd3286c9Cd4b984Bd7B454cB616319Fd"
+      abi: farm
+      startBlock: 16607833
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - BusinessImageRegistered
+        - BusinessImageUpdated
+        - BusinessNameRegistered
+        - BusinessNameUpdated
+        - EscrowCreated
+        - ProductAdded
+        - ProductReviewed
+        - ProductUpdated
+      abis:
+        - name: farm
+          file: ./abis/farm.json
+      eventHandlers:
+        - event: BusinessImageRegistered(indexed address,string)
+          handler: handleBusinessImageRegistered
+        - event: BusinessImageUpdated(indexed address,string)
+          handler: handleBusinessImageUpdated
+        - event: BusinessNameRegistered(indexed address,string)
+          handler: handleBusinessNameRegistered
+        - event: BusinessNameUpdated(indexed address,string)
+          handler: handleBusinessNameUpdated
+        - event: EscrowCreated(indexed address,indexed uint256)
+          handler: handleEscrowCreated
+        - event: ProductAdded(indexed address,string)
+          handler: handleProductAdded
+        - event: ProductReviewed(indexed address,uint256,string)
+          handler: handleProductReviewed
+        - event: ProductUpdated(indexed address,string)
+          handler: handleProductUpdated
+      file: ./src/farm.ts
+  - kind: ethereum
+    name: DAO
+    network: optimism-sepolia
+    source:
+      address: "0xF77db840f98eaA5cFC48973bE95e19624D324cDd"
+      abi: DAO
+      startBlock: 16624881
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - ChallengeCreated
+        - ChallengeResolved
+        - Delegated
+        - DisputeInitiated
+        - DisputeResolved
+        - NewInvestmentAddedToList
+        - NewProposal
+        - OwnershipTransferred
+        - ProposalExecuted
+        - ProposalTimeUpdated
+        - Undelegated
+        - Voted
+        - VotesTallied
+      abis:
+        - name: DAO
+          file: ./abis/DAO.json
+      eventHandlers:
+        - event: ChallengeCreated(indexed uint256,uint256,indexed address)
+          handler: handleChallengeCreated
+        - event: ChallengeResolved(indexed uint256,bool)
+          handler: handleChallengeResolved
+        - event: Delegated(indexed address,indexed address)
+          handler: handleDelegated
+        - event: DisputeInitiated(indexed uint256,uint256,indexed address)
+          handler: handleDisputeInitiated
+        - event: DisputeResolved(indexed uint256,bool)
+          handler: handleDisputeResolved
+        - event: NewInvestmentAddedToList(uint256,address)
+          handler: handleNewInvestmentAddedToList
+        - event: NewProposal(uint256,string,address)
+          handler: handleNewProposal
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: ProposalExecuted(uint256,uint256,address)
+          handler: handleProposalExecuted
+        - event: ProposalTimeUpdated(uint256,uint256)
+          handler: handleProposalTimeUpdated
+        - event: Undelegated(indexed address)
+          handler: handleUndelegated
+        - event: Voted(indexed address,indexed uint256,uint256)
+          handler: handleVoted
+        - event: VotesTallied(indexed uint256,uint256)
+          handler: handleVotesTallied
+      file: ./src/dao.ts
+  - kind: ethereum
+    name: investment
+    network: optimism-sepolia
+    source:
+      address: "0x56a56679679ad1D8e1b06bD66F86E8B0070DC720"
+      abi: investment
+      startBlock: 16611524
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - InvestmentWithdrawn
+        - NewFarmInvestment
+      abis:
+        - name: investment
+          file: ./abis/investment.json
+      eventHandlers:
+        - event: InvestmentWithdrawn(uint256,address,uint256)
+          handler: handleInvestmentWithdrawn
+        - event: NewFarmInvestment(uint256,address,uint256)
+          handler: handleNewFarmInvestment
+      file: ./src/investment.ts
