@@ -1,14 +1,22 @@
-import React from "react";
+"use client"
+
+import React, { useEffect } from "react";
 import { ScaffoldEthApp } from "../../components/ScaffoldEthAppWithProviders";
+import { useWeb3ModalAccount } from "@web3modal/ethers/react";
+import { useRouter } from "next/navigation";
 
 export default function GuestLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <ScaffoldEthApp>
-            {children}
-        </ScaffoldEthApp>
-    );
+    const router = useRouter();
+
+    const { isConnected } = useWeb3ModalAccount()
+  useEffect(() => {
+    if (isConnected) {
+      router.push("/user");
+    }
+  }, [isConnected]);
+  return <ScaffoldEthApp>{children}</ScaffoldEthApp>;
 }

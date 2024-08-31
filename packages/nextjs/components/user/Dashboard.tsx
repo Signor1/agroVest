@@ -1,6 +1,7 @@
+
 import React from 'react'
 
-const Dashboard = () => {
+const UserDashboard = () => {
     return (
         <section className="w-full flex flex-col gap-6 py-4">
             <h1 className='uppercase text-darkgreen font-medium text-base md:text-xl'>Overview</h1>
@@ -27,8 +28,12 @@ const Dashboard = () => {
                     <h1 className="text-2xl text-darkgreen font-semibold">0.9 ETH</h1>
                 </div>
             </main>
+
+            <main className='w-full grid md:grid-cols-2 gap-4'>
+
+            </main>
         </section>
     )
 }
 
-export default Dashboard
+export default UserDashboard
