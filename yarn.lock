@@ -1347,8 +1347,8 @@ __metadata:
   linkType: hard
 
 "@metamask/utils@npm:^9.0.0":
-  version: 9.1.0
-  resolution: "@metamask/utils@npm:9.1.0"
+  version: 9.2.1
+  resolution: "@metamask/utils@npm:9.2.1"
   dependencies:
     "@ethereumjs/tx": ^4.2.0
     "@metamask/superstruct": ^3.1.0
@@ -1359,7 +1359,7 @@ __metadata:
     pony-cause: ^2.1.10
     semver: ^7.5.4
     uuid: ^9.0.1
-  checksum: 01f2c71a8f06158d5335bfe96bfd2f3aa39ec6b2323c5d0ff1d3136071a3e8ff7c1804d640ba1d4e07f96f3e68a95ff7729ddfcd34b373e5fefd86d6ef12d034
+  checksum: 1a0c842d6fe490bb068c74c6c0684a3e5fabdadcf653b1c83bc69832e9e515fbae5809be20ddfc5c31715cd3d90cf18b73088d9c81f99028ff7b2c7160358c4e
   languageName: node
   linkType: hard
 
@@ -1872,24 +1872,6 @@ __metadata:
     react: ">=18"
     react-dom: ">=18"
   checksum: 7f44c18d403ea0346a1a3d6ef86bf91aaa4f6d7657b218eb4bcbb6cb6e289a975c8dcb50960afd2d7214fab74b3b4e0516b14c753a075414c8aa3f469099f052
-"@openzeppelin/contracts@npm:^5.0.2":
-  version: 5.0.2
-  resolution: "@openzeppelin/contracts@npm:5.0.2"
-  checksum: 0cce6fc284bd1d89e2a447027832a62f1356b44ee31088899453e10349a63a62df2f07da63d76e4c41aad9c86b96b650b2b6fc85439ef276850dda1170a047fd
-  languageName: node
-  linkType: hard
-
-"@openzeppelin/contracts@npm:^5.0.2":
-  version: 5.0.2
-  resolution: "@openzeppelin/contracts@npm:5.0.2"
-  checksum: 0cce6fc284bd1d89e2a447027832a62f1356b44ee31088899453e10349a63a62df2f07da63d76e4c41aad9c86b96b650b2b6fc85439ef276850dda1170a047fd
-  languageName: node
-  linkType: hard
-
-"@parcel/watcher-android-arm64@npm:2.4.1":
-  version: 2.4.1
-  resolution: "@parcel/watcher-android-arm64@npm:2.4.1"
-  conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
@@ -3072,6 +3054,13 @@ __metadata:
     chalk: ^4
     fast-levenshtein: ^3.0.0
   checksum: a7452e4d4b868411856dd3a195609af0757a8a171fbcc17f4311d8b04764e37f4c6d32dd1d9078b166452836e5fa7c42996ffb444016e466f92092c46a2606fb
+  languageName: node
+  linkType: hard
+
+"@openzeppelin/contracts@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "@openzeppelin/contracts@npm:5.0.2"
+  checksum: 0cce6fc284bd1d89e2a447027832a62f1356b44ee31088899453e10349a63a62df2f07da63d76e4c41aad9c86b96b650b2b6fc85439ef276850dda1170a047fd
   languageName: node
   linkType: hard
 
@@ -5902,12 +5891,12 @@ __metadata:
   linkType: hard
 
 "@types/react@npm:*, @types/react@npm:^18.0.21":
-  version: 18.3.4
-  resolution: "@types/react@npm:18.3.4"
+  version: 18.3.5
+  resolution: "@types/react@npm:18.3.5"
   dependencies:
     "@types/prop-types": "*"
     csstype: ^3.0.2
-  checksum: 555ccd1af86a23c781dea0360de64b2f7a0708cdcbf9e6496744b77630065868526fd55147c727dc5ef11b7fd712b04f7898757a84c67e2eb9dfd4c4ead10d95
+  checksum: 63d2ff473b348c902b68c20be55d2c5124d078c4336c2d1778f316c27789ed596657e8e714022ce14fb24994b0960fc64c913e629bb0bf85815355b0c31eb46b
   languageName: node
   linkType: hard
 
@@ -8258,9 +8247,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001406, caniuse-lite@npm:^1.0.30001646":
-  version: 1.0.30001653
-  resolution: "caniuse-lite@npm:1.0.30001653"
-  checksum: 289cf06c26a46f3e6460ccd5feffa788ab0ab35d306898c48120c65cfb11959bfa560e9f739393769b4fd01150c69b0747ad3ad5ec3abf3dfafd66df3c59254e
+  version: 1.0.30001655
+  resolution: "caniuse-lite@npm:1.0.30001655"
+  checksum: 3739c8f6d0fb55cff3c631d28c4fdafc81ab28756ce17a373428042c06f84a5877288d89fbe41be5ac494dd5092dca38ab91c9304e81935b9f2938419d2c23b3
   languageName: node
   linkType: hard
 
@@ -9927,9 +9916,9 @@ __metadata:
   linkType: hard
 
 "escalade@npm:^3.1.1, escalade@npm:^3.1.2":
-  version: 3.1.2
-  resolution: "escalade@npm:3.1.2"
-  checksum: 1ec0977aa2772075493002bdbd549d595ff6e9393b1cb0d7d6fcaf78c750da0c158f180938365486f75cb69fba20294351caddfce1b46552a7b6c3cde52eaa02
+  version: 3.2.0
+  resolution: "escalade@npm:3.2.0"
+  checksum: 47b029c83de01b0d17ad99ed766347b974b0d628e848de404018f3abee728e987da0d2d370ad4574aa3d5b5bfc368754fd085d69a30f8e75903486ec4b5b709e
   languageName: node
   linkType: hard
 
@@ -10858,7 +10847,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-main
+"forge-std@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "forge-std@npm:1.1.2"
+  checksum: d5b36b909269a39dd30b619ac09a78e59b1a65e7887872ef99304298c4ffe2aa16f5dc5238c77e481a5e615582191b446401098a2ed567283d7df87e099a9d3c
+  languageName: node
+  linkType: hard
+
 "form-data@npm:^2.2.0":
   version: 2.5.1
   resolution: "form-data@npm:2.5.1"
@@ -10878,12 +10873,6 @@ main
     combined-stream: ^1.0.8
     mime-types: ^2.1.12
   checksum: 01135bf8675f9d5c61ff18e2e2932f719ca4de964e3be90ef4c36aacfc7b9cb2fceb5eca0b7e0190e3383fe51c5b37f4cb80b62ca06a99aaabfcfd6ac7c9328c
-
-"forge-std@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "forge-std@npm:1.1.2"
-  checksum: d5b36b909269a39dd30b619ac09a78e59b1a65e7887872ef99304298c4ffe2aa16f5dc5238c77e481a5e615582191b446401098a2ed567283d7df87e099a9d3c
- development
   languageName: node
   linkType: hard
 
