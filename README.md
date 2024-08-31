@@ -90,7 +90,7 @@ The motivation behind Agro Vest is rooted in the desire to create sustainable ag
 PeerLend is a groundbreaking platform that brings a new level of sophistication and user empowerment to the DeFi space. Here’s how:
 
 
-  <div align="center">
+  <div align="left">
   <a>
     <img src="images/MarketPlace.png" alt="Logo">
   </a>
@@ -99,7 +99,7 @@ PeerLend is a groundbreaking platform that brings a new level of sophistication 
 
 <br />
 
-<div align="center">
+<div align="left">
   <a>
     <img src="images/Investment.png" alt="Logo">
   </a>
@@ -155,7 +155,7 @@ PeerLend is a groundbreaking platform that brings a new level of sophistication 
 - [ ] Feature 3
     - [ ] Nested Feature
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -164,7 +164,7 @@ PeerLend is a groundbreaking platform that brings a new level of sophistication 
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 
 
