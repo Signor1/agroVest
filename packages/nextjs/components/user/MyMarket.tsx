@@ -5,9 +5,12 @@ import React, { FormEvent, useState } from 'react'
 import Products from './Products'
 import { Modal, ModalContent, ModalHeader, ModalBody, Button, useDisclosure } from "@nextui-org/react";
 import Image from 'next/image'
+import { useCraeteProduct } from '~~/hooks/contractHooks/useCreateProduct'
 
 const MyMarket = () => {
     const path = usePathname()
+
+    const addProduct = useCraeteProduct();
 
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -21,10 +24,11 @@ const MyMarket = () => {
     const [productName, setProductName] = useState('')
     const [productImage, setProductImage] = useState('')
     const [productDesc, setProductDesc] = useState('')
-    const [productPrice, setProductPrice] = useState('')
+    const [productPrice, setProductPrice] = useState<any>(0)
 
-    const handleSubmit = (e: FormEvent) => {
+    const handleSubmit = async(e: FormEvent) => {
         e.preventDefault()
+        await addProduct(productName, productImage, productDesc, productPrice)
     }
     return (
         <section className="w-full flex flex-col gap-6 py-4">
@@ -154,7 +158,7 @@ const MyMarket = () => {
                                             Product Price
                                         </label>
                                         <input
-                                            type="text"
+                                            type="number"
                                             name="productPrice"
                                             id="productPrice"
                                             placeholder="Enter product price"
@@ -163,8 +167,7 @@ const MyMarket = () => {
                                             onChange={(e) => setProductPrice(e.target.value)}
                                         />
                                     </div>
-                                    <Button type="submit" className="bg-darkgreen text-lightgreen py-2.5 px-6 rounded-[7px] text-base mt-3">
-                                        Submit
+                                    <Button type="submit" className="bg-darkgreen text-lightgreen py-2.5 px-6 rounded-[7px] text-base mt-3">                       Submit
                                     </Button>
                                 </form>
                             </ModalBody>
