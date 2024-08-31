@@ -1,15 +1,14 @@
 "use client";
 import React from "react"
-import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 import { WagmiProvider } from "wagmi";
-import { BlockieAvatar } from "~~/components/scaffold-eth";
 import { ProgressBar } from "~~/components/scaffold-eth/ProgressBar";
 import { useInitializeNativeCurrencyPrice } from "~~/hooks/scaffold-eth";
 import { wagmiConfig } from "~~/services/web3/wagmiConfig";
 import Header from "./shared/Header";
 import Footer from "./shared/Footer";
+import { AppKit } from "~~/context/web3modal";
 
 export const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   useInitializeNativeCurrencyPrice();
@@ -39,10 +38,10 @@ export const ScaffoldEthAppWithProviders = ({ children }: { children: React.Reac
     <WagmiProvider config={wagmiConfig}>
       <QueryClientProvider client={queryClient}>
         <ProgressBar />
-        <RainbowKitProvider avatar={BlockieAvatar}>
+        <AppKit>
           {children}
-        </RainbowKitProvider>
+        </AppKit>
       </QueryClientProvider>
-    </WagmiProvider>
+    </WagmiProvider >
   );
 };
