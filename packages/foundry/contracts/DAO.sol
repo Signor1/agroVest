@@ -46,11 +46,11 @@ contract DAO is Ownable {
     }
 
     event DisputeInitiated(
-        uint256 indexed disputeId,
+        uint256 indexed disputeInitiatedId,
         uint256 challengeId,
         address indexed arbitrator
     );
-    event DisputeResolved(uint256 indexed disputeId, bool ruling);
+    event DisputeResolved(uint256 indexed disputeResolvedId, bool ruling);
 
     ProposalData[] public proposals;
 
@@ -70,7 +70,7 @@ contract DAO is Ownable {
     // Mapping of investment ID to address
     mapping(uint256 => address) public investments;
 
-    event NewProposal(uint256 Id, string Title, address Proposer);
+    event NewProposal(uint256 userId, string Title, address Proposer);
 
     event ProposalTimeUpdated(uint256 ProposalId, uint256 NewTime);
 
@@ -86,19 +86,25 @@ contract DAO is Ownable {
         uint256 votingPower
     );
 
-    event VotesTallied(uint256 indexed proposalId, uint256 totalVotingPower);
+    event VotesTallied(
+        uint256 indexed proposalIdTallyVote,
+        uint256 totalVotingPower
+    );
 
-    event Delegated(address indexed delegator, address indexed delegatee);
-    event Undelegated(address indexed delegator);
-    event ChallengeResolved(uint256 indexed challengeId, bool valid);
+    event Delegated(
+        address indexed delegatorAddress,
+        address indexed delegatee
+    );
+    event Undelegated(address indexed unDelegator);
+    event ChallengeResolved(uint256 indexed challengeIdResolved, bool valid);
 
     event ChallengeCreated(
-        uint256 indexed challengeId,
+        uint256 indexed challengeIdCreated,
         uint256 proposalId,
         address indexed challenger
     );
 
-    event NewInvestment(uint256 Id, address Address);
+    event NewInvestmentAddedToList(uint256 NewIdAdded, address Address);
 
     // Proposal and Voting Section
 
@@ -140,7 +146,7 @@ contract DAO is Ownable {
     ) external {
         investments[_investmentId] = _investmentAddress;
 
-        emit NewInvestment(_investmentId, _investmentAddress);
+        emit NewInvestmentAddedToList(_investmentId, _investmentAddress);
     }
 
     function updateProposalExecutionTime(uint256 _id, uint256 _delay) internal {
