@@ -37,7 +37,7 @@
 <h3 align="center">Agro Vest</h3>
 
   <p align="center">
-    Agro Vest is Empowering African farmers to directly sell to buyers, reducing the reliance on middlemen, it is also Empowering African farmers by providing investment funds for their farms.
+    AgroVest is a Real World Asset platform that empowers African farmers to tokenize their businesses, sell products directly, and secure investments.
 
 
 
