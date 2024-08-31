@@ -18,7 +18,6 @@ const Header = () => {
             document.body.style.overflow = "unset";
         }
     })
-
     return (
         <header className="w-full overflow-hidden">
             <div className={`fixed top-0 inset-x-0 z-50 w-full h-20 lg:px-8 md:px-4 py-3 transition-all duration-150 bg-darkgreen`}>
@@ -34,12 +33,13 @@ const Header = () => {
                     </div>
 
                     <div className="flex items-center justify-end gap-3">
-                        <button
+                        {/* <button
                             type="button"
                             className="text-darkgreen md:px-8 px-6 py-2.5 font-medium text-sm bg-lightgreen rounded-[10px]"
                         >
                             Connect Wallet
-                        </button>
+                        </button> */}
+                        <w3m-button />
 
 
                         <div className="md:hidden">

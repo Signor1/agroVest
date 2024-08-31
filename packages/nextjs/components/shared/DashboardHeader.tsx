@@ -73,12 +73,7 @@ const DashboardHeader = (
                     </Link>
 
                     {/* <!-- User Area --> */}
-                    <button
-                        type="button"
-                        className={`transition-all duration-200 bg-darkgreen text-lightgreen px-4 py-2.5 rounded-[7px] text-sm flex items-center gap-1`}
-                    >
-                        Connect Wallet
-                    </button>
+                    <w3m-button />
 
 
                     {/* <!-- User Area --> */}

@@ -1,0 +1,17 @@
+{
+  "optimism-sepolia": {
+    "Token": {
+      "address": "0x3784FCd74C49Ed086Bafd1c77dd9347edc719d7b",
+      "startBlock": 16607219
+    },
+    "farm": {
+      "address": "0x96b8cbC7Fd3286c9Cd4b984Bd7B454cB616319Fd"
+    },
+    "DAO": {
+      "address": "0xF77db840f98eaA5cFC48973bE95e19624D324cDd"
+    },
+    "investment": {
+      "address": "0x56a56679679ad1D8e1b06bD66F86E8B0070DC720"
+    }
+  }
+}

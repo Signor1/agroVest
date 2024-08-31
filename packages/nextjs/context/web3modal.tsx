@@ -39,7 +39,12 @@ createWeb3Modal({
     ethersConfig,
     chains: [mainnet],
     projectId,
-    enableAnalytics: true // Optional - defaults to your Cloud configuration
+    enableAnalytics: true,// Optional - defaults to your Cloud configuration
+    themeVariables: {
+        "--w3m-accent": "#D2FE75",
+        "--w3m-border-radius-master": "",
+        "--w3m-font-size-master": "18",
+      },
 })
 
 export function AppKit({ children }: { children: React.ReactNode }) {

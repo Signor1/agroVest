@@ -1,0 +1,248 @@
+type Approval @entity(immutable: true) {
+  id: Bytes!
+  owner: Bytes! # address
+  spender: Bytes! # address
+  value: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type TokenLocked @entity(immutable: true) {
+  id: Bytes!
+  _amount: BigInt! # uint256
+  owner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type TokenUnlocked @entity(immutable: true) {
+  id: Bytes!
+  _amount: BigInt! # uint256
+  owner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Transfer @entity(immutable: true) {
+  id: Bytes!
+  from: Bytes! # address
+  to: Bytes! # address
+  value: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+type BusinessImageRegistered @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  image: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type BusinessImageUpdated @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  image: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type BusinessNameRegistered @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  name: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type BusinessNameUpdated @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  name: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type EscrowCreated @entity(immutable: true) {
+  id: Bytes!
+  buyer: Bytes! # address
+  orderId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ProductAdded @entity(immutable: true) {
+  id: Bytes!
+  farmer: Bytes! # address
+  productName: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ProductReviewed @entity(immutable: true) {
+  id: Bytes!
+  buyer: Bytes! # address
+  productId: BigInt! # uint256
+  review: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ProductUpdated @entity(immutable: true) {
+  id: Bytes!
+  farmer: Bytes! # address
+  productName: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+type ChallengeCreated @entity(immutable: true) {
+  id: Bytes!
+  challengeIdCreated: BigInt! # uint256
+  proposalId: BigInt! # uint256
+  challenger: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ChallengeResolved @entity(immutable: true) {
+  id: Bytes!
+  challengeIdResolved: BigInt! # uint256
+  valid: Boolean! # bool
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Delegated @entity(immutable: true) {
+  id: Bytes!
+  delegatorAddress: Bytes! # address
+  delegatee: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DisputeInitiated @entity(immutable: true) {
+  id: Bytes!
+  disputeInitiatedId: BigInt! # uint256
+  challengeId: BigInt! # uint256
+  arbitrator: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type DisputeResolved @entity(immutable: true) {
+  id: Bytes!
+  disputeResolvedId: BigInt! # uint256
+  ruling: Boolean! # bool
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type NewInvestmentAddedToList @entity(immutable: true) {
+  id: Bytes!
+  NewIdAdded: BigInt! # uint256
+  Address: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type NewProposal @entity(immutable: true) {
+  id: Bytes!
+  userId: BigInt! # uint256
+  Title: String! # string
+  Proposer: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ProposalExecuted @entity(immutable: true) {
+  id: Bytes!
+  ProposalId: BigInt! # uint256
+  FarmId: BigInt! # uint256
+  Proposer: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ProposalTimeUpdated @entity(immutable: true) {
+  id: Bytes!
+  ProposalId: BigInt! # uint256
+  NewTime: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Undelegated @entity(immutable: true) {
+  id: Bytes!
+  unDelegator: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Voted @entity(immutable: true) {
+  id: Bytes!
+  voter: Bytes! # address
+  proposalId: BigInt! # uint256
+  votingPower: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type VotesTallied @entity(immutable: true) {
+  id: Bytes!
+  proposalIdTallyVote: BigInt! # uint256
+  totalVotingPower: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+type InvestmentWithdrawn @entity(immutable: true) {
+  id: Bytes!
+  farmId: BigInt! # uint256
+  withdrawerAddress: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type NewFarmInvestment @entity(immutable: true) {
+  id: Bytes!
+  farmID: BigInt! # uint256
+  investorAddress: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
