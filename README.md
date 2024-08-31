@@ -79,23 +79,56 @@
 
 
 <!-- GETTING STARTED -->
+## Inspiration
+
+The motivation behind Agro Vest is rooted in the desire to create sustainable agricultural communities. Many farmers face challenges such as lack of access to capital, market inefficiencies, and limited opportunities for growth. Agro Vest addresses these issues by providing a platform where farmers can showcase their projects, attract investment, and build long-term partnerships with backers who are genuinely interested in the success of their ventures.
+
+
+
 ## Getting Started
 
-<div align="center">
+PeerLend is a groundbreaking platform that brings a new level of sophistication and user empowerment to the DeFi space. Here’s how:
+
+
+  <div align="center">
   <a>
     <img src="images/MarketPlace.png" alt="Logo">
   </a>
 
-This is the marketplace page for users to buy products form farmers
+- **Marketplace**: The Agro Vest marketplace serves as a digital hub where farmers can list their products, services, and investment opportunities. By joining the marketplace, farmers gain access to a global audience, allowing them to showcase their offerings and attract the attention of buyers and investors who are interested in supporting sustainable agriculture.
 
 <br />
 
-  <div align="center">
+<div align="center">
   <a>
     <img src="images/Investment.png" alt="Logo">
   </a>
 
-  Investment page allows users to invest in farms and earn rewards
+- **Investment**: The investment feature of Agro Vest is at the heart of its mission to empower farmers and transform the agricultural landscape. This feature allows investors to directly support farmers by funding their projects, creating a mutually beneficial relationship that fosters growth and sustainability.
+
+<br />
+
+- **Diverse Product Listings**: Farmers can list a wide range of products, from fresh produce and livestock to value-added goods like dairy products, organic fertilizers, and artisanal items. This diversity allows farmers to reach different market segments, enhancing their sales opportunities and expanding their customer base.
+
+
+
+## How We Built It
+
+- **Solidity Smart Contracts**
+- **Scaffold ETH**
+- **Optimisim**
+- **The Graph**
+- **Next Js**
+
+
+## Challenges We Ran Into
+
+- **Circles**::
+- **The Graph**:
+- **Scaffold ETH**: 
+
+
+
 
 
 <!-- USAGE EXAMPLES -->
