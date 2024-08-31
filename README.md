@@ -34,7 +34,7 @@
     <img src="images/agrovestLogo.png" alt="Logo">
   </a>
 
-<h3 align="center">Agro Vest</h3>
+<h3 align="center">AgroVest</h3>
 
   <p align="center">
     AgroVest is a Real World Asset platform that empowers African farmers to tokenize their businesses, sell products directly, and secure investments.
