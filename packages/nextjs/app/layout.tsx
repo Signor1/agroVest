@@ -4,6 +4,7 @@ import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 import { Montserrat as FontSans } from "next/font/google";
 import { cn } from "~~/~/lib/utils";
 import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
+import { Toaster } from "react-hot-toast";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
         fontSans.variable
       )}>
         <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>
+        <Toaster />
       </body>
     </html>
   );

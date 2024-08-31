@@ -1,10 +1,16 @@
 import Image from 'next/image'
 import React, { FormEvent, useState } from 'react'
 import { Modal, ModalContent, ModalHeader, ModalBody, Button, useDisclosure } from "@nextui-org/react";
+import { useCreateFarm } from '~~/hooks/contractHooks/useCreateFarm';
+import { useWeb3ModalAccount } from '@web3modal/ethers/react';
 
 const ExploreUserFarm = () => {
 
+    const {address} = useWeb3ModalAccount()
+
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
+    const createFarm:any = useCreateFarm()
+    // const regFarmer = useCreateFarm()
 
 
     // Uplaod to IPFS and return of the URI
@@ -14,13 +20,14 @@ const ExploreUserFarm = () => {
         setSelectedFile(target.files[0]);
     };
 
-    const [productName, setProductName] = useState('')
-    const [productImage, setProductImage] = useState('')
-    const [productDesc, setProductDesc] = useState('')
-    const [productPrice, setProductPrice] = useState('')
-
-    const handleSubmit = (e: FormEvent) => {
+    const [Name, setName] = useState('')
+    const [imageURI, setImageURI] = useState('')
+    const [Location, setLocation] = useState('')
+    const [ContactInfo, setContactInfo] = useState('')
+    const [email, setEmail] = useState("")
+    const handleSubmit = async (e: FormEvent) => {
         e.preventDefault()
+        await createFarm(Name, imageURI, Location, ContactInfo, address,  email)
     }
 
     return (
@@ -106,74 +113,91 @@ const ExploreUserFarm = () => {
                                     </div>
                                     <div className="flex flex-col">
                                         <label
-                                            htmlFor="productName"
+                                            htmlFor="Name"
                                             className="text-gray-800 font-medium ml-1"
                                         >
-                                            Product Name
+                                            Name
                                         </label>
                                         <input
                                             type="text"
-                                            name="productName"
-                                            id="productName"
+                                            name="Name"
+                                            id="Name"
                                             placeholder="Enter product name"
                                             className="w-full caret-color1 py-3 px-4 outline-none rounded-lg border border-color1 text-sm bg-color1/5 text-color3"
-                                            value={productName}
-                                            onChange={(e) => setProductName(e.target.value)}
+                                            value={Name}
+                                            onChange={(e) => setName(e.target.value)}
                                             required
                                         />
                                     </div>
                                     <div className="flex flex-col">
                                         <label
-                                            htmlFor="productImg"
+                                            htmlFor="ImageURI"
                                             className="text-color3 font-medium ml-1"
                                         >
-                                            Product Image URI
+                                            Image URI
                                         </label>
                                         <input
                                             type="text"
-                                            name="productImg"
-                                            id="productImg"
+                                            name="ImageURI"
+                                            id="ImageURI"
                                             placeholder="Product Image URI"
                                             className="w-full caret-color1 py-3 px-4 outline-none rounded-lg border border-color1 text-sm bg-color1/5 text-color3"
-                                            value={productImage}
-                                            onChange={(e: any) => setProductImage(e.target.value)}
+                                            value={imageURI}
+                                            onChange={(e: any) => setImageURI(e.target.value)}
                                             readOnly
                                             required
                                         />
                                     </div>
                                     <div className="flex flex-col">
                                         <label
-                                            htmlFor="productDesc"
+                                            htmlFor="Location"
                                             className="text-color3 font-medium ml-1"
                                         >
-                                            Product Description
+                                           Location
                                         </label>
                                         <input
                                             type="text"
-                                            name="productDesc"
-                                            id="productDesc"
+                                            name="Location"
+                                            id="Location"
                                             placeholder="Enter product description"
                                             className="w-full caret-color1 py-3 px-4 outline-none rounded-lg border border-color1 text-sm bg-color1/5 text-color3"
-                                            value={productDesc}
-                                            onChange={(e) => setProductDesc(e.target.value)}
+                                            value={Location}
+                                            onChange={(e) => setLocation(e.target.value)}
                                             required
                                         />
                                     </div>
                                     <div className="flex flex-col">
                                         <label
-                                            htmlFor="productPrice"
+                                            htmlFor="ContactInfo"
                                             className="text-color3 font-medium ml-1"
                                         >
-                                            Product Price
+                                            Contact Info
                                         </label>
                                         <input
-                                            type="text"
-                                            name="productPrice"
-                                            id="productPrice"
+                                            type="number"
+                                            name="ContactInfo"
+                                            id="ContactInfo"
                                             placeholder="Enter product price"
                                             className="w-full caret-color1 py-3 px-4 outline-none rounded-lg border border-color1 text-sm bg-color1/5 text-color3"
-                                            value={productPrice}
-                                            onChange={(e) => setProductPrice(e.target.value)}
+                                            value={ContactInfo}
+                                            onChange={(e) => setContactInfo(e.target.value)}
+                                        />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <label
+                                            htmlFor="email"
+                                            className="text-color3 font-medium ml-1"
+                                        >
+                                            email
+                                        </label>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            id="email"
+                                            placeholder="Enter product price"
+                                            className="w-full caret-color1 py-3 px-4 outline-none rounded-lg border border-color1 text-sm bg-color1/5 text-color3"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}
                                         />
                                     </div>
                                     <Button type="submit" className="bg-darkgreen text-lightgreen py-2.5 px-6 rounded-[7px] text-base mt-3">

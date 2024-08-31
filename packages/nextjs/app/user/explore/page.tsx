@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import ExploreUserFarm from "~~/components/user/Explore"
 
