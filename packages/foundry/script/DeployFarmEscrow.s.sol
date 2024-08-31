@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "../contracts/YourContract.sol";
+import "../contracts/FarmEscrow.sol";
 import "./DeployHelpers.s.sol";
 
 contract DeployScript is ScaffoldETHDeploy {
@@ -16,13 +16,13 @@ contract DeployScript is ScaffoldETHDeploy {
         }
         vm.startBroadcast(deployerPrivateKey);
 
-        YourContract yourContract = new YourContract(
-            vm.addr(deployerPrivateKey)
+        FarmEscrow escrow = new FarmEscrow(
+            0x3784FCd74C49Ed086Bafd1c77dd9347edc719d7b
         );
         console.logString(
             string.concat(
                 "YourContract deployed at: ",
-                vm.toString(address(yourContract))
+                vm.toString(address(escrow))
             )
         );
 
