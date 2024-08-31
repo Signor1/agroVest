@@ -1,9 +1,9 @@
 import "@rainbow-me/rainbowkit/styles.css";
-import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
 import "~~/styles/globals.css";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 import { Montserrat as FontSans } from "next/font/google";
 import { cn } from "~~/~/lib/utils";
+import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
 
 const fontSans = FontSans({
   subsets: ["latin"],
